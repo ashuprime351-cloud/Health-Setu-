@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Symptom Guidance &mdash; Health Setu</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="/" class="nav-brand">
+      <span class="brand-icon">⚕️</span>
+      <span>Health Setu<span class="brand-sub">Healthcare Within Reach</span></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/symptom" class="active">Symptom Guidance</a></li>
+      <li><a href="/hospital">Hospital Finder</a></li>
+      <li><a href="/schemes">Health Schemes</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <h1>🩺 Symptom Guidance</h1>
+    <p>Select the symptoms you are experiencing. The ML model returns general category information — not a diagnosis.</p>
+  </div>
+</div>
+
+<!-- Medical disclaimer -->
+<div class="notice-bar">
+  <div class="container">
+    &#9888;&#65039; <strong>Educational tool only.</strong> This is NOT a medical diagnosis. Always consult a qualified doctor. <strong>Emergency? Call 112 immediately.</strong>
+  </div>
+</div>
+
+{% if not model_ready %}
+<div class="container" style="margin-top:1.25rem">
+  <div class="alert alert-error">
+    <span>&#9888;&#65039;</span>
+    <span><strong>Model not trained.</strong> Run <code>python train_model.py</code> in the project directory, then restart the server.</span>
+  </div>
+</div>
+{% endif %}
+
+<section class="section">
+  <div class="container">
+    <div class="symptom-layout">
+
+      <!-- Form -->
+      <div class="form-card">
+        <div class="form-card-title">Select Your Symptoms</div>
+        <div class="form-card-sub">Tick everything that applies. At least one symptom is required.</div>
+
+        {% if model_ready %}
+        <form id="symptomForm">
+          {% set labels = {
+            'fever':               '🌡️ Fever',
+            'cough':               '🤧 Cough',
+            'headache':            '🧠 Headache',
+            'fatigue':             '😴 Fatigue',
+            'sore_throat':         '🗣️ Sore Throat',
+            'runny_nose':          '👃 Runny Nose',
+            'body_ache':           '💪 Body Ache',
+            'nausea':              '🤢 Nausea',
+            'vomiting':            '🤮 Vomiting',
+            'diarrhea':            '🚽 Diarrhoea',
+            'shortness_of_breath': '💨 Shortness of Breath',
+            'chest_pain':          '❤️ Chest Pain',
+            'rash':                '🌿 Rash',
+            'dizziness':           '😵 Dizziness',
+            'loss_of_appetite':    '🍽️ Loss of Appetite'
+          } %}
+          <div class="symptom-grid">
+            {% for f in features %}
+            <label class="symptom-chip">
+              <input type="checkbox" name="symptom" value="{{ f }}" />
+              {{ labels.get(f, f.replace('_',' ').title()) }}
+            </label>
+            {% endfor %}
+          </div>
+
+          <hr class="chip-divider" />
+
+          <div id="formError" class="alert alert-error" style="display:none;margin-bottom:.75rem;"></div>
+
+          <button type="submit" id="submitBtn" class="btn btn-primary btn-full">
+            Get Guidance
+          </button>
+        </form>
+        {% else %}
+        <p style="color:#64748b;font-size:.9rem">Train the model first to enable this feature.</p>
+        {% endif %}
+      </div>
+
+      <!-- Result panel -->
+      <div class="result-panel" id="resultPanel" style="display:none;">
+        <div class="result-panel-header">
+          <strong style="font-size:.9rem;letter-spacing:.3px;text-transform:uppercase;">Guidance Result</strong>
+          <div style="font-size:.78rem;color:rgba(255,255,255,.55);margin-top:.2rem">General information — not a diagnosis</div>
+        </div>
+        <div class="result-panel-body" id="resultBody"></div>
+      </div>
+
+      <!-- Placeholder shown before first submission (desktop) -->
+      {% if model_ready %}
+      <div class="result-panel" id="resultPlaceholder">
+        <div class="result-placeholder">
+          <div class="result-placeholder-icon">🩺</div>
+          <p>Select your symptoms on the left and click <strong>Get Guidance</strong> to see results here.</p>
+        </div>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-brand">⚕️ Health Setu</div>
+    <div class="footer-sub">General information only &mdash; Not a medical diagnosis</div>
+  </div>
+</footer>
+
+<script>
+// Hide placeholder once result panel shows
+(function(){
+  var obs = new MutationObserver(function(){
+    var rp = document.getElementById('resultPanel');
+    var ph = document.getElementById('resultPlaceholder');
+    if(rp && ph && rp.style.display !== 'none') ph.style.display = 'none';
+  });
+  var rp = document.getElementById('resultPanel');
+  if(rp) obs.observe(rp, { attributes:true, attributeFilter:['style'] });
+})();
+</script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

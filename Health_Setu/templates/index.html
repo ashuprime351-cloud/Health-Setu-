@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health Setu — Healthcare Within Reach</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="/" class="nav-brand">
+      <span class="brand-icon">⚕️</span>
+      <span>Health Setu<span class="brand-sub">Healthcare Within Reach</span></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/" class="active">Home</a></li>
+      <li><a href="/symptom">Symptom Guidance</a></li>
+      <li><a href="/hospital">Hospital Finder</a></li>
+      <li><a href="/schemes">Health Schemes</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">&#9679; Free &amp; Offline-capable</div>
+    <h1 class="hero-title">Health Setu &mdash;<br><span class="accent">Healthcare Within Reach</span></h1>
+    <p class="hero-sub">Symptom guidance, hospital discovery, and government health scheme information — privacy-first, no internet required.</p>
+    <div class="hero-cta">
+      <a href="/symptom" class="btn btn-primary btn-lg">Check Symptoms</a>
+      <a href="/hospital" class="btn btn-outline btn-lg">Find a Hospital</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat-item">
+        <div class="hero-stat-val">9+</div>
+        <div class="hero-stat-label">Conditions covered</div>
+      </div>
+      <div class="hero-stat-item">
+        <div class="hero-stat-val">30+</div>
+        <div class="hero-stat-label">Hospitals listed</div>
+      </div>
+      <div class="hero-stat-item">
+        <div class="hero-stat-val">5</div>
+        <div class="hero-stat-label">Health schemes</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-card-stack">
+      <div class="hero-mini-card">
+        <div class="hero-mini-icon hmi-teal">🩺</div>
+        <div>
+          <div class="hero-mini-label">AI Symptom Check</div>
+          <div class="hero-mini-val">ML-powered guidance</div>
+        </div>
+      </div>
+      <div class="hero-mini-card">
+        <div class="hero-mini-icon hmi-blue">🗺️</div>
+        <div>
+          <div class="hero-mini-label">Hospital Finder</div>
+          <div class="hero-mini-val">30+ facilities</div>
+        </div>
+      </div>
+      <div class="hero-mini-card">
+        <div class="hero-mini-icon hmi-green">📋</div>
+        <div>
+          <div class="hero-mini-label">Govt. Schemes</div>
+          <div class="hero-mini-val">PM-JAY, CGHS &amp; more</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAT BAR -->
+<div class="stat-bar">
+  <div class="stat-bar-inner">
+    <div class="stat-item"><div class="stat-val">100%</div><div class="stat-label">Offline — no API keys</div></div>
+    <div class="stat-item"><div class="stat-val">Free</div><div class="stat-label">No paid services</div></div>
+    <div class="stat-item"><div class="stat-val">Private</div><div class="stat-label">No data sent externally</div></div>
+    <div class="stat-item"><div class="stat-val">Open</div><div class="stat-label">Educational use</div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">Our Services</div>
+    <h2 class="section-title">Everything You Need in One Place</h2>
+    <p class="section-sub">Three tools designed to support your healthcare journey, all running locally on your machine.</p>
+    <div class="cards-grid">
+
+      <div class="card card-teal">
+        <div class="card-icon ci-teal">🩺</div>
+        <h3>Symptom Guidance</h3>
+        <p>Select your symptoms and get general health information from a locally trained Naive Bayes ML model. Educational guidance — not a diagnosis.</p>
+        <a href="/symptom" class="btn-ghost">Start Guidance &rarr;</a>
+      </div>
+
+      <div class="card card-navy">
+        <div class="card-icon ci-navy">🗺️</div>
+        <h3>Hospital Finder</h3>
+        <p>Search a directory of hospitals and healthcare centres by city or name. Records are clearly labelled as demo data pending verification.</p>
+        <a href="/hospital" class="btn-ghost">Find Hospitals &rarr;</a>
+      </div>
+
+      <div class="card card-green">
+        <div class="card-icon ci-green">📋</div>
+        <h3>Health Schemes</h3>
+        <p>Learn about government-backed schemes — Ayushman Bharat, CGHS, ESI, JSY and NHM — with links to official portals only.</p>
+        <a href="/schemes" class="btn-ghost">View Schemes &rarr;</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<div class="disclaimer-strip">
+  <div class="container">
+    <p>&#9888;&#65039; <strong>Medical Disclaimer:</strong> Health Setu provides general information only and does <strong>not</strong> provide medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional. In an emergency, call <strong>112</strong>.</p>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-brand">⚕️ Health Setu</div>
+    <div class="footer-sub">Healthcare Within Reach &mdash; Built with Flask &middot; Pure NumPy ML &middot; For educational purposes only</div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/symptom">Symptom Guidance</a>
+      <a href="/hospital">Hospital Finder</a>
+      <a href="/schemes">Health Schemes</a>
+    </div>
+  </div>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

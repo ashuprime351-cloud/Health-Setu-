@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health Schemes &mdash; Health Setu</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="/" class="nav-brand">
+      <span class="brand-icon">⚕️</span>
+      <span>Health Setu<span class="brand-sub">Healthcare Within Reach</span></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/symptom">Symptom Guidance</a></li>
+      <li><a href="/hospital">Hospital Finder</a></li>
+      <li><a href="/schemes" class="active">Health Schemes</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <h1>📋 Health Schemes</h1>
+    <p>Government-backed healthcare schemes that may help you access affordable medical care.</p>
+  </div>
+</div>
+
+<div class="notice-bar">
+  <div class="container">
+    &#8505;&#65039; <strong>Verification required:</strong> Eligibility rules, benefit limits, and application processes change over time. Always verify through official portals before applying.
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="schemes-grid">
+
+      <!-- PM-JAY -->
+      <div class="scheme-card">
+        <div class="scheme-header blue">
+          <span class="scheme-icon">🏥</span>
+          <div>
+            <h3>Ayushman Bharat &ndash; PM-JAY</h3>
+            <span class="scheme-badge">Central Government</span>
+          </div>
+        </div>
+        <div class="scheme-body">
+          <p><strong>What it is:</strong> PM-JAY provides health cover to economically vulnerable families for secondary and tertiary care hospitalisation.</p>
+          <ul>
+            <li>Up to &#8377;5 lakh cover per family per year <em>(verify current limit)</em>.</li>
+            <li>Cashless treatment at empanelled hospitals nationwide.</li>
+            <li>Pre-existing conditions covered from day one <em>(verify terms)</em>.</li>
+          </ul>
+          <p class="scheme-note">&#9888; Eligibility based on SECC data and state lists. Check the official portal to confirm.</p>
+          <a href="https://pmjay.gov.in" target="_blank" rel="noopener" class="btn-scheme">Official Portal &rarr;</a>
+        </div>
+      </div>
+
+      <!-- CGHS -->
+      <div class="scheme-card">
+        <div class="scheme-header teal">
+          <span class="scheme-icon">👨‍⚕️</span>
+          <div>
+            <h3>Central Govt. Health Scheme (CGHS)</h3>
+            <span class="scheme-badge">Central Government</span>
+          </div>
+        </div>
+        <div class="scheme-body">
+          <p><strong>What it is:</strong> CGHS provides comprehensive healthcare to central government employees, pensioners, and dependants.</p>
+          <ul>
+            <li>OPD treatment and medicines at CGHS Wellness Centres.</li>
+            <li>Specialist consultations at empanelled hospitals.</li>
+            <li>Cashless hospitalisation at empanelled private hospitals (subject to referral).</li>
+          </ul>
+          <p class="scheme-note">&#9888; Available to eligible central govt. employees and pensioners only.</p>
+          <a href="https://cghs.gov.in" target="_blank" rel="noopener" class="btn-scheme">Official Portal &rarr;</a>
+        </div>
+      </div>
+
+      <!-- ESI -->
+      <div class="scheme-card">
+        <div class="scheme-header green">
+          <span class="scheme-icon">🏭</span>
+          <div>
+            <h3>Employees&rsquo; State Insurance (ESI)</h3>
+            <span class="scheme-badge">Central Government</span>
+          </div>
+        </div>
+        <div class="scheme-body">
+          <p><strong>What it is:</strong> ESI is a self-financing health insurance scheme for workers in the organised sector.</p>
+          <ul>
+            <li>Full medical care for insured persons and family.</li>
+            <li>Cash sickness and maternity benefits.</li>
+            <li>Disability benefits available <em>(verify current terms)</em>.</li>
+          </ul>
+          <p class="scheme-note">&#9888; For employees below a notified wage threshold in covered establishments. Verify current limit.</p>
+          <a href="https://esic.gov.in" target="_blank" rel="noopener" class="btn-scheme">Official Portal &rarr;</a>
+        </div>
+      </div>
+
+      <!-- JSY -->
+      <div class="scheme-card">
+        <div class="scheme-header purple">
+          <span class="scheme-icon">👩‍👧</span>
+          <div>
+            <h3>Janani Suraksha Yojana (JSY)</h3>
+            <span class="scheme-badge">Central Government</span>
+          </div>
+        </div>
+        <div class="scheme-body">
+          <p><strong>What it is:</strong> JSY promotes institutional deliveries to reduce maternal and neonatal mortality.</p>
+          <ul>
+            <li>Cash assistance to pregnant women for institutional delivery.</li>
+            <li>ASHA workers provide support and accompany beneficiaries.</li>
+            <li>Benefits vary by state (LPS vs HPS classification).</li>
+          </ul>
+          <p class="scheme-note">&#9888; Amounts differ by state. Verify through your nearest PHC or Anganwadi centre.</p>
+          <a href="https://nhm.gov.in" target="_blank" rel="noopener" class="btn-scheme">NHM Portal &rarr;</a>
+        </div>
+      </div>
+
+      <!-- NHM -->
+      <div class="scheme-card">
+        <div class="scheme-header orange">
+          <span class="scheme-icon">🌍</span>
+          <div>
+            <h3>National Health Mission (NHM)</h3>
+            <span class="scheme-badge">Central Government</span>
+          </div>
+        </div>
+        <div class="scheme-body">
+          <p><strong>What it is:</strong> NHM (NRHM + NUHM) aims to provide accessible, affordable healthcare to rural and urban populations.</p>
+          <ul>
+            <li>Strengthening public health infrastructure.</li>
+            <li>Free essential medicines and diagnostics at public facilities.</li>
+            <li>Mobile health services for remote areas.</li>
+          </ul>
+          <p class="scheme-note">&#9888; Services vary by state. Contact your nearest government health facility for local details.</p>
+          <a href="https://nhm.gov.in" target="_blank" rel="noopener" class="btn-scheme">NHM Portal &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="alert alert-warning" style="margin-top:2rem;">
+      <span>&#9888;&#65039;</span>
+      <span><strong>Important:</strong> Health Setu does not verify current eligibility rules, benefit amounts, or application processes. All scheme information is for general awareness only. Always use official government portals for accurate, current details before applying.</span>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-brand">⚕️ Health Setu</div>
+    <div class="footer-sub">Scheme information for general awareness only &mdash; verify through official portals</div>
+  </div>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

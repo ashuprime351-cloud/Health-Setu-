@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Finder &mdash; Health Setu</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="/" class="nav-brand">
+      <span class="brand-icon">⚕️</span>
+      <span>Health Setu<span class="brand-sub">Healthcare Within Reach</span></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/symptom">Symptom Guidance</a></li>
+      <li><a href="/hospital" class="active">Hospital Finder</a></li>
+      <li><a href="/schemes">Health Schemes</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <h1>🗺️ Hospital Finder</h1>
+    <p>Search hospitals and healthcare centres by city or name. All records are demo data — verify independently before visiting.</p>
+  </div>
+</div>
+
+<div class="notice-bar">
+  <div class="container">
+    &#8505;&#65039; <strong>Demo Data:</strong> Addresses, phone numbers and availability have <strong>not</strong> been independently verified. Please confirm through official sources before visiting or calling any facility.
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <div class="search-bar-row">
+      <select id="cityFilter" class="form-select">
+        <option value="">All Cities</option>
+        {% for city in cities %}
+        <option value="{{ city }}">{{ city }}</option>
+        {% endfor %}
+      </select>
+      <input type="text" id="nameSearch" class="form-input" placeholder="Search by name or type&hellip;" />
+      <button id="searchBtn" class="btn btn-primary">Search</button>
+      <button id="clearBtn" class="btn btn-outline-navy">Clear</button>
+    </div>
+
+    <div id="hospitalLoading" class="loading-msg" style="display:none;">Searching&hellip;</div>
+    <div id="hospitalError" class="alert alert-error" style="display:none;margin-bottom:1rem;"></div>
+    <div id="hospitalResults" class="hospital-grid"></div>
+    <div id="noResults" class="empty-state" style="display:none;">
+      <div class="empty-state-icon">🏥</div>
+      <p>No hospitals found. Try a different city or keyword.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-brand">⚕️ Health Setu</div>
+    <div class="footer-sub">All records are demo data &mdash; verify independently before use</div>
+  </div>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

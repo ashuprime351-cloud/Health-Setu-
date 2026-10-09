@@ -1,0 +1,32 @@
+name,city,type,address,phone,emergency,note
+AIIMS Delhi,Delhi,Government Hospital,"Ansari Nagar East,New Delhi - 110029",011-26588500,Yes,Demo Data – Verify before use
+Safdarjung Hospital,Delhi,Government Hospital,"Ansari Nagar West,New Delhi - 110029",011-26707444,Yes,Demo Data – Verify before use
+Ram Manohar Lohia Hospital,Delhi,Government Hospital,"Baba Kharak Singh Marg,New Delhi - 110001",011-23404000,Yes,Demo Data – Verify before use
+Apollo Hospital Delhi,Delhi,Private Hospital,"Sarita Vihar,Mathura Road,New Delhi - 110076",011-29871011,Yes,Demo Data – Verify before use
+Fortis Escorts Heart Institute,Delhi,Private Hospital,"Okhla Road,New Delhi - 110025",011-47135000,Yes,Demo Data – Verify before use
+KEM Hospital,Mumbai,Government Hospital,"Acharya Donde Marg,Parel,Mumbai - 400012",022-24107000,Yes,Demo Data – Verify before use
+Lilavati Hospital,Mumbai,Private Hospital,"A-791,Bandra Reclamation,Mumbai - 400050",022-26751000,Yes,Demo Data – Verify before use
+Hinduja Hospital,Mumbai,Private Hospital,"Veer Savarkar Marg,Mahim,Mumbai - 400016",022-24452222,Yes,Demo Data – Verify before use
+Nanavati Hospital,Mumbai,Private Hospital,"S V Road,Vile Parle West,Mumbai - 400056",022-26177100,Yes,Demo Data – Verify before use
+Bowring & Lady Curzon Hospital,Bengaluru,Government Hospital,"Shivajinagar,Bengaluru - 560001",080-25533148,Yes,Demo Data – Verify before use
+Victoria Hospital,Bengaluru,Government Hospital,"Fort Road,Bengaluru - 560002",080-26701150,Yes,Demo Data – Verify before use
+Manipal Hospital,Bengaluru,Private Hospital,"98,HAL Airport Road,Bengaluru - 560017",080-25023311,Yes,Demo Data – Verify before use
+Fortis Hospital Bangalore,Bengaluru,Private Hospital,"14,Cunningham Road,Bengaluru - 560052",080-66214444,Yes,Demo Data – Verify before use
+PGIMER,Chandigarh,Government Hospital,"Sector 12,Chandigarh - 160012",0172-2756565,Yes,Demo Data – Verify before use
+Government Multi Specialty Hospital,Chandigarh,Government Hospital,"Sector 16,Chandigarh - 160015",0172-2740050,Yes,Demo Data – Verify before use
+GMCH Chandigarh,Chandigarh,Government Hospital,"Sector 32,Chandigarh - 160030",0172-2665253,Yes,Demo Data – Verify before use
+NIMS Hospital,Hyderabad,Private Hospital,"Punjagutta,Hyderabad - 500082",040-23489999,Yes,Demo Data – Verify before use
+Osmania General Hospital,Hyderabad,Government Hospital,Hyderabad - 500012,040-24600177,Yes,Demo Data – Verify before use
+Care Hospital,Hyderabad,Private Hospital,"Exhibition Road,Nampally,Hyderabad - 500001",040-30418000,Yes,Demo Data – Verify before use
+JIPMER,Puducherry,Government Hospital,"Dhanvantari Nagar,Puducherry - 605006",0413-2272380,Yes,Demo Data – Verify before use
+Apollo Hospitals Chennai,Chennai,Private Hospital,"21,Greams Lane,Chennai - 600006",044-28290200,Yes,Demo Data – Verify before use
+Government Stanley Hospital,Chennai,Government Hospital,"Old Jail Road,Chennai - 600001",044-25281201,Yes,Demo Data – Verify before use
+Ruby Hall Clinic,Pune,Private Hospital,"40,Sassoon Road,Pune - 411001",020-26163391,Yes,Demo Data – Verify before use
+Sassoon General Hospital,Pune,Government Hospital,"Near Pune Railway Station,Pune - 411001",020-26128000,Yes,Demo Data – Verify before use
+AIIMS Bhopal,Bhopal,Government Hospital,"Saket Nagar,Bhopal - 462020",0755-2672355,Yes,Demo Data – Verify before use
+Hamidia Hospital,Bhopal,Government Hospital,"Royal Market,Bhopal - 462001",0755-2540222,Yes,Demo Data – Verify before use
+AIIMS Jodhpur,Jodhpur,Government Hospital,"Basni Industrial Area,Jodhpur - 342005",0291-2740741,Yes,Demo Data – Verify before use
+AIIMS Patna,Patna,Government Hospital,"Phulwarisharif,Patna - 801505",0612-2451070,Yes,Demo Data – Verify before use
+AIIMS Rishikesh,Rishikesh,Government Hospital,"Virbhadra Road,Rishikesh - 249203",0135-2462927,Yes,Demo Data – Verify before use
+Medical College Hospital Kolkata,Kolkata,Government Hospital,"88,College Street,Kolkata - 700073",033-22121825,Yes,Demo Data – Verify before use
+Apollo Gleneagles Hospital,Kolkata,Private Hospital,"58,Canal Circular Road,Kolkata - 700054",033-23201000,Yes,Demo Data – Verify before use
